@@ -1,0 +1,48 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  border-bottom: 0.5px solid $Grayish-blue;
+}
+
+.brand {
+  color: $Black;
+  font-weight: $font-weight-700;
+  font-size: 2rem;
+}
+
+.nav {
+  padding: 0 2rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: $Dark-grayish-blue;
+}
+
+.navbar-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-left: auto;
+}
+
+.cart {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.avatar {
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100%;
+}
