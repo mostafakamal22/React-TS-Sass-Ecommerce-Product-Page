@@ -1,0 +1,35 @@
+.cart {
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 90vw;
+  min-height: 15rem;
+  margin: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.125rem 0.25rem 1rem $Black-lightbox;
+  @media screen and (min-width: $large-laptops-desktops) {
+    top: 5rem;
+    width: 30rem;
+    right: 0;
+    left: 50%;
+  }
+}
+
+.cart-title {
+  padding: 0.5rem;
+  text-align: left;
+  font-weight: $font-weight-700;
+  border-bottom: 0.1rem solid $Grayish-blue;
+}
+
+.cart-message {
+  margin: auto;
+  font-weight: $font-weight-700;
+  color: $Dark-grayish-blue;
+}

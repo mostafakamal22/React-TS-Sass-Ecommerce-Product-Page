@@ -2,8 +2,13 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem 2rem;
-  border-bottom: 0.5px solid $Grayish-blue;
+  padding: 1rem;
+  @media screen and (min-width: $large-laptops-desktops) {
+    padding: 1.5rem 2rem;
+  }
+  @media screen and (min-width: $extra-large-laptops-desktops) {
+    border-bottom: 0.5px solid $Grayish-blue;
+  }
 }
 
 .brand {
@@ -16,33 +21,105 @@
   padding: 0 2rem;
 }
 
+.nav-desktop {
+  display: none;
+  @media screen and (min-width: $large-laptops-desktops) {
+    display: block;
+  }
+}
+
+.nav-mobile {
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 0;
+  transition: all 0.35s ease-in-out;
+  @media screen and (min-width: $large-laptops-desktops) {
+    display: none;
+  }
+}
+
 .nav-list {
   display: flex;
   gap: 2rem;
+}
+
+.nav-list-mobile {
+  @extend .nav-list;
+  width: 15rem;
+  height: 100%;
+  background: $White;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2.5rem 2rem;
+  transform: translateX(-15rem);
+  transition: all 0.35s ease-in-out;
 }
 
 .nav-link {
   color: $Dark-grayish-blue;
 }
 
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: $Orange;
+  text-decoration: underline;
+}
+
+.nav-link-mobile {
+  color: $Black;
+  font-weight: $font-weight-700;
+}
+
+.nav-link-mobile:hover,
+.nav-link-mobile:focus,
+.nav-link-mobile:active {
+  @extend .nav-link;
+}
+
 .navbar-info {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1rem;
   margin-left: auto;
+  @media screen and (min-width: $large-laptops-desktops) {
+    gap: 2.5rem;
+  }
 }
 
-.cart {
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
+.cart-products-no {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background: $Orange;
+  color: $White;
+  padding: 0.4rem;
 }
 
 .avatar {
   display: block;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2rem;
+  height: 2rem;
+  border: 0.125rem solid transparent;
   border-radius: 100%;
+  transition: all 0.25s ease-in-out;
+  @media screen and (min-width: $large-laptops-desktops) {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+.avatar:hover {
+  border-color: $Orange;
 }

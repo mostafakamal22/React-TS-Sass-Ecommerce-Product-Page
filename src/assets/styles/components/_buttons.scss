@@ -1,0 +1,35 @@
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 0.125rem solid transparent;
+  border-radius: 0.25rem;
+}
+
+.btn:active,
+.btn:focus,
+.btn:hover {
+  border-color: $Orange;
+}
+
+.btn-menu {
+  display: block;
+  margin-top: 0.5rem;
+  @media screen and (min-width: $large-laptops-desktops) {
+    display: none;
+  }
+}
+
+.btn-close {
+  margin-bottom: 1.5rem;
+}
+
+.cart-btn {
+  position: relative;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 0.25rem;
+}
