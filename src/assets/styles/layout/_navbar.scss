@@ -4,7 +4,8 @@
   gap: 1rem;
   padding: 1rem;
   @media screen and (min-width: $large-laptops-desktops) {
-    padding: 1.5rem 2rem;
+    padding: 0 2rem;
+    min-height: 6rem;
   }
   @media screen and (min-width: $extra-large-laptops-desktops) {
     border-bottom: 0.5px solid $Grayish-blue;
@@ -23,8 +24,10 @@
 
 .nav-desktop {
   display: none;
+  align-self: stretch;
   @media screen and (min-width: $large-laptops-desktops) {
-    display: block;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -33,6 +36,7 @@
   display: block;
   position: absolute;
   inset: 0;
+  z-index: 5;
   background: rgba(0, 0, 0, 0.55);
   padding: 0;
   transition: all 0.35s ease-in-out;
@@ -42,6 +46,7 @@
 }
 
 .nav-list {
+  height: 100%;
   display: flex;
   gap: 2rem;
 }
@@ -54,20 +59,31 @@
   justify-content: start;
   align-items: flex-start;
   flex-direction: column;
-  padding: 2.5rem 2rem;
+  padding: 2rem;
   transform: translateX(-15rem);
   transition: all 0.35s ease-in-out;
 }
 
-.nav-link {
-  color: $Dark-grayish-blue;
+.nav-list-mobile {
+  @extend .nav-list;
 }
 
-.nav-link:hover,
-.nav-link:focus,
-.nav-link:active {
-  color: $Orange;
-  text-decoration: underline;
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 1rem;
+  border-bottom: 0.2rem solid transparent;
+  transition: all 0.25s ease-in-out;
+}
+
+.nav-item:hover,
+.nav-item:focus-within {
+  border-color: $Orange;
+}
+
+.nav-link {
+  color: $Dark-grayish-blue;
 }
 
 .nav-link-mobile {
@@ -78,7 +94,7 @@
 .nav-link-mobile:hover,
 .nav-link-mobile:focus,
 .nav-link-mobile:active {
-  @extend .nav-link;
+  color: $Orange;
 }
 
 .navbar-info {

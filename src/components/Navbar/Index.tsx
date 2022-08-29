@@ -1,10 +1,11 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Cart } from "./components/Cart";
 
 //Nav Links Data
 const navLinks: string[] = ["Collections", "Men", "Women", "About", "Contact"];
 
 export const Navbar = (): JSX.Element => {
+  const [showCart, setShowCart] = useState(false);
   const mobileNav = useRef<HTMLElement>(null);
   const navList = useRef<HTMLUListElement>(null);
 
@@ -55,8 +56,8 @@ export const Navbar = (): JSX.Element => {
               <button className="btn btn-close" onClick={closeMenu}>
                 <img src="/src/assets/images/icon-close.svg" alt="close" />
               </button>
-              {navLinks.map((link) => (
-                <li key={link} className="nav-item">
+              {navLinks.map((link: string) => (
+                <li key={link} className="nav-item-mobile">
                   <a href="#" className="nav-link-mobile">
                     {link}
                   </a>
@@ -66,7 +67,10 @@ export const Navbar = (): JSX.Element => {
           </nav>
 
           <div className="navbar-info">
-            <button className="btn cart-btn">
+            <button
+              className="btn cart-btn"
+              onClick={() => setShowCart(!showCart)}
+            >
               <span className="cart-products-no">1</span>
               <img src="/src/assets/images/icon-cart.svg" alt="cart" />
             </button>
@@ -75,7 +79,7 @@ export const Navbar = (): JSX.Element => {
               src="/src/assets/images/image-avatar.png"
               alt="avatar"
             />
-            <Cart />
+            <Cart showCart={showCart} />
           </div>
         </div>
       </header>
