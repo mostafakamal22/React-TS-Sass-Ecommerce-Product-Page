@@ -1,18 +1,26 @@
+@mixin box-shadow($x, $y, $blur, $c) {
+  -webkit-box-shadow: $x $y $blur $c;
+  -moz-box-shadow: $x $y $blur $c;
+  -ms-box-shadow: $x $y $blur $c;
+  box-shadow: $x $y $blur $c;
+}
+
 .cart {
   display: none;
   position: absolute;
   top: 5rem;
   left: 0;
   right: 0;
-  z-index: 0;
+  z-index: 12;
   flex-direction: column;
   text-align: center;
-  width: 90vw;
-  min-height: 15rem;
+  width: 95vw;
+  min-height: 20rem;
   margin: auto;
+  margin-top: 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  box-shadow: 0.125rem 0.25rem 1rem $Black-lightbox;
+  @include box-shadow(0, 0, 0.5rem, $Black);
   background: rgb(255, 255, 255);
   @media screen and (min-width: $large-laptops-desktops) {
     top: 5.5rem;
