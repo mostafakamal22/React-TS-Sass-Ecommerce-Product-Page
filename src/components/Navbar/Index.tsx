@@ -5,7 +5,7 @@ import { Cart } from "./components/Cart";
 const navLinks: string[] = ["Collections", "Men", "Women", "About", "Contact"];
 
 export const Navbar = (): JSX.Element => {
-  const [showCart, setShowCart] = useState(false);
+  const [showCart, setShowCart] = useState(true);
   const mobileNav = useRef<HTMLElement>(null);
   const navList = useRef<HTMLUListElement>(null);
 
