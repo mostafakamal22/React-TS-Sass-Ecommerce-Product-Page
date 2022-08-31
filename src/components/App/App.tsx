@@ -1,5 +1,5 @@
 import { MainLayout } from "../MainLayout/MainLayout";
-import { Navbar } from "../Navbar/Index";
+import { Navbar } from "../Navbar/Navbar";
 
 const App = (): JSX.Element => {
   return (

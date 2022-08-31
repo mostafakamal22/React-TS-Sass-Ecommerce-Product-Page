@@ -1,7 +1,16 @@
 .mySwiper {
   width: 100%;
+  max-width: 35rem;
   min-height: 22rem;
   margin: 0;
+  @media screen and (min-width: $large-laptops-desktops) {
+    flex-basis: 45%;
+    border-radius: 0.5rem;
+  }
+  @media screen and (min-width: $extra-large-laptops-desktops) {
+    max-width: 33rem;
+    min-height: 20rem;
+  }
 }
 
 .swiper-slide {
@@ -38,6 +47,9 @@
   height: 2.5rem;
   border-radius: 100%;
   color: $Black;
+  @media screen and (min-width: $large-laptops-desktops) {
+    display: none;
+  }
 }
 
 .swiper-button-next::after,
@@ -48,6 +60,9 @@
 
 .swiper-pagination {
   display: none;
+  @media screen and (min-width: $large-laptops-desktops) {
+    display: block;
+  }
 }
 
 .swiper-pagination-bullet {

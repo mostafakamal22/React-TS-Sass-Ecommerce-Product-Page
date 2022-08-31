@@ -20,10 +20,10 @@
   margin-top: 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  @include box-shadow(0, 0, 0.5rem, $Black);
+  @include box-shadow(0, 0.1rem, 1.5rem, $Dark-grayish-blue);
   background: rgb(255, 255, 255);
   @media screen and (min-width: $large-laptops-desktops) {
-    top: 5.5rem;
+    top: 5.2rem;
     width: 30rem;
     right: 0;
     left: 50%;
