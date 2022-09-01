@@ -1,4 +1,3 @@
-import { MotionConfig } from "framer-motion";
 import { useContext } from "react";
 import {
   IsModalContext,
@@ -27,7 +26,7 @@ export const CarouselModal = (): JSX.Element => {
       className="modal"
     >
       <button className="btn btn-close-modal" onClick={() => setIsModal(false)}>
-        <img src="/src/assets/images/icon-close.svg" alt="close modal" />
+        <img src="/images/icon-close.svg" alt="close modal" />
       </button>
       <Carousel />
     </motion.div>

@@ -62,7 +62,7 @@ export const Cart = ({ showCart, setShowCart }: CartProps): JSX.Element => {
           <div className="cart-product-info">
             <img
               className="cart-product-thumbnail"
-              src="/src/assets/images/image-product-1-thumbnail.jpg"
+              src="/images/image-product-1-thumbnail.jpg"
             />
             <span className="cart-product-title">{product.title}</span>
             <span className="cart-product-price">${product.price}</span>
@@ -74,10 +74,7 @@ export const Cart = ({ showCart, setShowCart }: CartProps): JSX.Element => {
               className="btn btn-remove"
               onClick={() => setProduct({ ...product, count: 0 })}
             >
-              <img
-                src="/src/assets/images/icon-delete.svg"
-                alt="remove product"
-              />
+              <img src="/images/icon-delete.svg" alt="remove product" />
             </button>
           </div>
 
