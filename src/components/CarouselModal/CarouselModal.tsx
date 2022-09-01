@@ -1,9 +1,14 @@
 import { useContext } from "react";
-import { IsModalContext } from "../../context/isModal/isModalContext";
+import {
+  IsModalContext,
+  IsModalContextType,
+} from "../../context/isModal/isModalContext";
 import { Carousel } from "../Carousel/Carousel";
 
 export const CarouselModal = (): JSX.Element => {
-  const { setIsModal, isModal } = useContext(IsModalContext);
+  const { setIsModal, isModal } = useContext(
+    IsModalContext
+  ) as IsModalContextType;
 
   return (
     <div style={{ display: isModal ? "flex" : "none" }} className="modal">

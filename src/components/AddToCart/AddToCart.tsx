@@ -1,8 +1,13 @@
 import { useContext, useState } from "react";
-import { ProductContext } from "../../context/product/productContext";
+import {
+  ProductContext,
+  ProductContextTypes,
+} from "../../context/product/productContext";
 
 export const AddToCart = (): JSX.Element => {
-  const { product, setProduct } = useContext(ProductContext);
+  const { product, setProduct } = useContext(
+    ProductContext
+  ) as ProductContextTypes;
   const [count, setCount] = useState(0);
   return (
     <div className="add-to-cart">

@@ -1,7 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { IsModalContext } from "./isModalContext";
 
-export const IsModalState = ({ children }: any) => {
+export type StateProps = {
+  children: React.ReactNode;
+};
+
+export const IsModalState: React.FC<StateProps> = ({ children }) => {
   const [isModal, setIsModal] = useState(false);
 
   return (

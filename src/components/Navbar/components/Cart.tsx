@@ -1,5 +1,8 @@
 import { useContext, useEffect, useRef } from "react";
-import { ProductContext } from "../../../context/product/productContext";
+import {
+  ProductContext,
+  ProductContextTypes,
+} from "../../../context/product/productContext";
 
 type CartProps = {
   showCart: boolean;
@@ -8,7 +11,9 @@ type CartProps = {
 
 export const Cart = ({ showCart, setShowCart }: CartProps): JSX.Element => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const { product, setProduct } = useContext(ProductContext);
+  const { product, setProduct } = useContext(
+    ProductContext
+  ) as ProductContextTypes;
 
   const closeCartHandler = (e: any): void => {
     if (

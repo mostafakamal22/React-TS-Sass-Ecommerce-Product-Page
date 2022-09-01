@@ -1,3 +1,9 @@
 import { createContext } from "react";
+import { ProductTypes } from "./ProductState";
 
-export const ProductContext = createContext<any | null>(null);
+export type ProductContextTypes = {
+  product: ProductTypes;
+  setProduct: any;
+};
+
+export const ProductContext = createContext<ProductContextTypes | null>(null);

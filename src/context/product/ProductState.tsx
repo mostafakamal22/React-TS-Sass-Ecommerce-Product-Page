@@ -1,7 +1,9 @@
+import { FC } from "react";
 import { useLocalStorage } from "../../hooks/useStorage/useStorage";
+import { StateProps } from "../isModal/IsModalState";
 import { ProductContext } from "./productContext";
 
-type ProductTypes = {
+export type ProductTypes = {
   title: string;
   price: number;
   count: number;
@@ -15,7 +17,7 @@ const productData: ProductTypes = {
   thumbnail: "/src/assets/images/image-product-3-thumbnail.jpg",
 };
 
-export const ProductState = ({ children }: any) => {
+export const ProductState: FC<StateProps> = ({ children }) => {
   const [product, setProduct] = useLocalStorage("product", productData);
 
   return (

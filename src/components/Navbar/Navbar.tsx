@@ -1,5 +1,8 @@
 import { useContext, useRef, useState } from "react";
-import { ProductContext } from "../../context/product/productContext";
+import {
+  ProductContext,
+  ProductContextTypes,
+} from "../../context/product/productContext";
 import { Cart } from "./components/Cart";
 
 //Nav Links Data
@@ -9,7 +12,7 @@ export const Navbar = (): JSX.Element => {
   const [showCart, setShowCart] = useState(true);
   const mobileNav = useRef<HTMLElement>(null);
   const navList = useRef<HTMLUListElement>(null);
-  const { product } = useContext(ProductContext);
+  const { product } = useContext(ProductContext) as ProductContextTypes;
 
   //handle open menu
   const openMenu = () => {

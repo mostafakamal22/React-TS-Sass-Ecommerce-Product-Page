@@ -9,7 +9,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Navigation, Pagination } from "swiper";
-import { IsModalContext } from "../../context/isModal/isModalContext";
+import {
+  IsModalContext,
+  IsModalContextType,
+} from "../../context/isModal/isModalContext";
 
 const carouselImagesPaths: string[] = [
   "/src/assets/images/image-product-1.jpg",
@@ -26,7 +29,7 @@ const carouselThumbnails: string[] = [
 ];
 
 export const Carousel = (): JSX.Element => {
-  const { setIsModal } = useContext(IsModalContext);
+  const { setIsModal } = useContext(IsModalContext) as IsModalContextType;
   const pagination = {
     bulletElement: "img",
     clickable: true,
