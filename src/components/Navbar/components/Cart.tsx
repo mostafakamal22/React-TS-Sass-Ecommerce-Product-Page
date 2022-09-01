@@ -3,6 +3,7 @@ import {
   ProductContext,
   ProductContextTypes,
 } from "../../../context/product/productContext";
+import { motion } from "framer-motion";
 
 type CartProps = {
   showCart: boolean;
@@ -37,8 +38,20 @@ export const Cart = ({ showCart, setShowCart }: CartProps): JSX.Element => {
     };
   }, [showCart]);
 
+  //animations
+  const variants = {
+    open: { opacity: 1 },
+    closed: { opacity: 0 },
+  };
+
   return (
-    <div ref={cardRef} className="cart">
+    <motion.div
+      layout
+      animate={!showCart ? "open" : "closed"}
+      variants={variants}
+      ref={cardRef}
+      className="cart"
+    >
       <p className="cart-title">Cart</p>
       {/* Empty Cart */}
       {!product?.count && <p className="cart-message">Your Cart is empty.</p>}
@@ -71,6 +84,6 @@ export const Cart = ({ showCart, setShowCart }: CartProps): JSX.Element => {
           <button className="btn btn-checkout">Checkout</button>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
