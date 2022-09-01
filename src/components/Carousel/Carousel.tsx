@@ -15,17 +15,17 @@ import {
 } from "../../context/isModal/isModalContext";
 
 const carouselImagesPaths: string[] = [
-  "/images/image-product-1.jpg",
-  "/images/image-product-2.jpg",
-  "/images/image-product-3.jpg",
-  "/images/image-product-4.jpg",
+  "/ecommerce-product-page/images/image-product-1.jpg",
+  "/ecommerce-product-page/images/image-product-2.jpg",
+  "/ecommerce-product-page/images/image-product-3.jpg",
+  "/ecommerce-product-page/images/image-product-4.jpg",
 ];
 
 const carouselThumbnails: string[] = [
-  "/images/image-product-1-thumbnail.jpg",
-  "/images/image-product-2-thumbnail.jpg",
-  "/images/image-product-3-thumbnail.jpg",
-  "/images/image-product-4-thumbnail.jpg",
+  "/ecommerce-product-page/images/image-product-1-thumbnail.jpg",
+  "/ecommerce-product-page/images/image-product-2-thumbnail.jpg",
+  "/ecommerce-product-page/images/image-product-3-thumbnail.jpg",
+  "/ecommerce-product-page/images/image-product-4-thumbnail.jpg",
 ];
 
 export const Carousel = (): JSX.Element => {
