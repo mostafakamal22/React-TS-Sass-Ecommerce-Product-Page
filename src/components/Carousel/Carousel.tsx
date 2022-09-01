@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useContext, useMemo } from "react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Navigation, Pagination } from "swiper";
+import { IsModalContext } from "../../context/isModal/isModalContext";
 
 const carouselImagesPaths: string[] = [
   "/src/assets/images/image-product-1.jpg",
@@ -25,6 +26,7 @@ const carouselThumbnails: string[] = [
 ];
 
 export const Carousel = (): JSX.Element => {
+  const { setIsModal } = useContext(IsModalContext);
   const pagination = {
     bulletElement: "img",
     clickable: true,
@@ -43,7 +45,7 @@ export const Carousel = (): JSX.Element => {
     () =>
       carouselImagesPaths.map((path, index) => (
         <SwiperSlide key={index}>
-          <img src={path} alt="product name" />
+          <img src={path} alt="product name" onClick={() => setIsModal(true)} />
         </SwiperSlide>
       )),
     []

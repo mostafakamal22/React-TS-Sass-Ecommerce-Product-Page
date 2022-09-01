@@ -1,5 +1,5 @@
 import { useContext, useRef, useState } from "react";
-import { ProductContext } from "../App/App";
+import { ProductContext } from "../../context/product/productContext";
 import { Cart } from "./components/Cart";
 
 //Nav Links Data

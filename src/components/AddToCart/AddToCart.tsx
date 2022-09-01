@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { ProductContext } from "../App/App";
+import { ProductContext } from "../../context/product/productContext";
 
 export const AddToCart = (): JSX.Element => {
   const { product, setProduct } = useContext(ProductContext);

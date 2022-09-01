@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef } from "react";
-import { ProductContext } from "../../App/App";
+import { ProductContext } from "../../../context/product/productContext";
 
 type CartProps = {
   showCart: boolean;
@@ -15,7 +15,7 @@ export const Cart = ({ showCart, setShowCart }: CartProps): JSX.Element => {
       !cardRef?.current!.contains(e.target) &&
       !document.getElementById("btn-cart")?.contains(e.target)
     ) {
-      setTimeout(() => setShowCart(true), 1000);
+      setShowCart(true);
     }
   };
 
