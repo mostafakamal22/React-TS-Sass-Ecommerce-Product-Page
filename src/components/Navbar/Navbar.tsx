@@ -37,7 +37,10 @@ export const Navbar = (): JSX.Element => {
       <header>
         <div className="navbar">
           <button className="btn btn-menu" onClick={openMenu}>
-            <img src="/images/icon-menu.svg" alt="menu" />
+            <img
+              src="/ecommerce-product-page/images/icon-menu.svg"
+              alt="menu"
+            />
           </button>
 
           <a href="#" className="brand">
@@ -59,7 +62,10 @@ export const Navbar = (): JSX.Element => {
           <nav ref={mobileNav} className="nav nav-mobile">
             <ul ref={navList} className="nav-list-mobile">
               <button className="btn btn-close" onClick={closeMenu}>
-                <img src="/images/icon-close.svg" alt="close" />
+                <img
+                  src="/ecommerce-product-page/images/icon-close.svg"
+                  alt="close"
+                />
               </button>
               {navLinks.map((link: string) => (
                 <li key={link} className="nav-item-mobile">
@@ -85,11 +91,14 @@ export const Navbar = (): JSX.Element => {
               >
                 {product?.count && 1}
               </span>
-              <img src="/images/icon-cart.svg" alt="cart" />
+              <img
+                src="/ecommerce-product-page/images/icon-cart.svg"
+                alt="cart"
+              />
             </button>
             <img
               className="avatar"
-              src="/images/image-avatar.png"
+              src="/ecommerce-product-page/images/image-avatar.png"
               alt="avatar"
             />
             <Cart showCart={showCart} setShowCart={setShowCart} />

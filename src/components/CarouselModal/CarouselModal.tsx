@@ -26,7 +26,10 @@ export const CarouselModal = (): JSX.Element => {
       className="modal"
     >
       <button className="btn btn-close-modal" onClick={() => setIsModal(false)}>
-        <img src="/images/icon-close.svg" alt="close modal" />
+        <img
+          src="/ecommerce-product-page/images/icon-close.svg"
+          alt="close modal"
+        />
       </button>
       <Carousel />
     </motion.div>
