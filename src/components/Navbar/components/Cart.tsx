@@ -3,18 +3,33 @@ import { ProductContext } from "../../App/App";
 
 type CartProps = {
   showCart: boolean;
+  setShowCart: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const Cart = ({ showCart }: CartProps): JSX.Element => {
+export const Cart = ({ showCart, setShowCart }: CartProps): JSX.Element => {
   const cardRef = useRef<HTMLDivElement>(null);
   const { product, setProduct } = useContext(ProductContext);
 
+  const closeCartHandler = (e: any): void => {
+    if (
+      !cardRef?.current!.contains(e.target) &&
+      !document.getElementById("btn-cart")?.contains(e.target)
+    ) {
+      setTimeout(() => setShowCart(true), 1000);
+    }
+  };
+
   useEffect(() => {
+    window.addEventListener("click", (e) => closeCartHandler(e));
     if (showCart) {
       cardRef.current!.style.display = "none";
     } else {
       cardRef.current!.style.display = "flex";
     }
+
+    return () => {
+      window.removeEventListener("click", (e) => closeCartHandler(e));
+    };
   }, [showCart]);
 
   return (

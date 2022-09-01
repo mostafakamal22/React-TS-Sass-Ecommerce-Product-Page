@@ -70,6 +70,7 @@ export const Navbar = (): JSX.Element => {
 
           <div className="navbar-info">
             <button
+              id="btn-cart"
               className="btn cart-btn"
               onClick={() => setShowCart(!showCart)}
             >
@@ -88,7 +89,7 @@ export const Navbar = (): JSX.Element => {
               src="/src/assets/images/image-avatar.png"
               alt="avatar"
             />
-            <Cart showCart={showCart} />
+            <Cart showCart={showCart} setShowCart={setShowCart} />
           </div>
         </div>
       </header>
