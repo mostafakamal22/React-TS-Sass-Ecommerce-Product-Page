@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
+import { ProductContext } from "../App/App";
 import { Cart } from "./components/Cart";
 
 //Nav Links Data
@@ -8,6 +9,7 @@ export const Navbar = (): JSX.Element => {
   const [showCart, setShowCart] = useState(true);
   const mobileNav = useRef<HTMLElement>(null);
   const navList = useRef<HTMLUListElement>(null);
+  const { product } = useContext(ProductContext);
 
   //handle open menu
   const openMenu = () => {
@@ -71,7 +73,14 @@ export const Navbar = (): JSX.Element => {
               className="btn cart-btn"
               onClick={() => setShowCart(!showCart)}
             >
-              <span className="cart-products-no">1</span>
+              <span
+                style={{
+                  display: `${product?.count ? "flex" : "none"}`,
+                }}
+                className="cart-products-no"
+              >
+                {product?.count && 1}
+              </span>
               <img src="/src/assets/images/icon-cart.svg" alt="cart" />
             </button>
             <img

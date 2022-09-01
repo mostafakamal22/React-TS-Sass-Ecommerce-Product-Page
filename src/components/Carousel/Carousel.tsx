@@ -51,25 +51,6 @@ export const Carousel = (): JSX.Element => {
 
   return (
     <>
-      {/* <Caro showArrows={true}>
-        <div>
-          <img src="/src/assets/images/image-product-1.jpg" />
-          <p className="legend">Legend 1</p>
-        </div>
-        <div>
-          <img src="/src/assets/images/image-product-2.jpg" />
-          <p className="legend">Legend 2</p>
-        </div>
-        <div>
-          <img src="/src/assets/images/image-product-3.jpg" />
-          <p className="legend">Legend 3</p>
-        </div>
-        <div>
-          <img src="/src/assets/images/image-product-4.jpg" />
-          <p className="legend">Legend 4</p>
-        </div>
-      </Caro> */}
-
       <Swiper
         pagination={pagination}
         navigation={true}
