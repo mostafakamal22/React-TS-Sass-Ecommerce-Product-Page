@@ -1,4 +1,5 @@
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { ProductState } from "../../../context/product/ProductState";
 import { AddToCart } from "../AddToCart";
 
@@ -39,7 +40,8 @@ describe("AddToCart", () => {
     expect(plusIcon).toBeInTheDocument();
   });
 
-  it("the plus button changes the count state to be >= 0 after click", () => {
+  it("the plus button changes the count state to be >= 0 after click", async () => {
+    const user = userEvent.setup();
     render(
       <ProductState>
         <AddToCart />
@@ -50,7 +52,7 @@ describe("AddToCart", () => {
 
     expect(parseInt(count.textContent!)).toEqual(0);
 
-    fireEvent.click(plusBtn);
+    await user.click(plusBtn);
 
     expect(parseInt(count.textContent!)).toBeGreaterThanOrEqual(0);
   });
@@ -66,7 +68,9 @@ describe("AddToCart", () => {
     expect(minusIcon).toBeInTheDocument();
   });
 
-  it("the minus button changes the count state to be >= 0 after click", () => {
+  it("the minus button changes the count state to be >= 0 after click", async () => {
+    const user = userEvent.setup();
+
     render(
       <ProductState>
         <AddToCart />
@@ -77,7 +81,7 @@ describe("AddToCart", () => {
 
     expect(parseInt(count.textContent!)).toEqual(0);
 
-    fireEvent.click(minusBtn);
+    await user.click(minusBtn);
 
     expect(parseInt(count.textContent!)).toBeGreaterThanOrEqual(0);
   });
