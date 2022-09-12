@@ -51,6 +51,7 @@ export const Cart = ({ showCart, setShowCart }: CartProps): JSX.Element => {
       variants={variants}
       ref={cardRef}
       className="cart"
+      title="cart"
     >
       <p className="cart-title">Cart</p>
       {/* Empty Cart */}

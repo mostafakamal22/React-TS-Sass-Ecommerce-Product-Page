@@ -1,4 +1,6 @@
-export const Footer = (): JSX.Element => {
+import { FC } from "react";
+
+export const Footer: FC = (): JSX.Element => {
   return (
     <footer>
       Challenge by{" "}

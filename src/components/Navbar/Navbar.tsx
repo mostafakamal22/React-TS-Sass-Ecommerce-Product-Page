@@ -6,7 +6,13 @@ import {
 import { Cart } from "./components/Cart";
 
 //Nav Links Data
-const navLinks: string[] = ["Collections", "Men", "Women", "About", "Contact"];
+export const navLinks: string[] = [
+  "Collections",
+  "Men",
+  "Women",
+  "About",
+  "Contact",
+];
 
 export const Navbar = (): JSX.Element => {
   const [showCart, setShowCart] = useState(true);
