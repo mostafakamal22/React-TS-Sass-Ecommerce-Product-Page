@@ -3,7 +3,7 @@
 ![React-TS-Sass-Ecommerce-Product-Page](https://socialify.git.ci/mostafakamal22/React-TS-Sass-Ecommerce-Product-Page/image?description=1&font=Bitter&language=1&name=1&owner=1&stargazers=1&theme=Auto)
 
 ![Design preview for the E-commerce product page coding challenge](./src/design/desktop-preview.jpg)
-![Design preview for the E-commerce product page coding challenge](./src/design/mobile-preview.jpg)
+![Design preview for the E-commerce product page coding challenge](./src/design/mobile-design.jpg)
 
 
 ## The challenge
@@ -36,7 +36,7 @@ Technologies used in the project:
 
 <h2>💻 Tested with</h2>
 
-Unit Testing With:
+Unit Testing:
 
 *   Jest
 *   React-Testing-Library
